@@ -1,0 +1,370 @@
+{
+  "test_cases": [
+    {
+      "id": "nav_001",
+      "category": "basic_navigation",
+      "input": "How do I sell my textbook?",
+      "expected_elements": ["posting steps", "pricing guidance", "photo requirements", "safety reminder"],
+      "success_criteria": "Provides clear step-by-step posting instructions with NTU-specific pickup location example",
+      "edge_case": false
+    },
+    {
+      "id": "nav_002",
+      "category": "basic_navigation",
+      "input": "I want to search for calculators",
+      "expected_elements": ["search instructions", "filter options", "category guidance"],
+      "success_criteria": "Explains how to search and filter items by category",
+      "edge_case": false
+    },
+    {
+      "id": "nav_003",
+      "category": "basic_navigation",
+      "input": "How do I contact a seller?",
+      "expected_elements": ["messaging instructions", "platform chat feature", "safety note about keeping communication on platform"],
+      "success_criteria": "Directs user to use in-app chat and explains why off-platform communication is discouraged",
+      "edge_case": false
+    },
+    {
+      "id": "nav_004",
+      "category": "basic_navigation",
+      "input": "I need to edit my listing price",
+      "expected_elements": ["edit listing steps", "where to find listing", "save changes instruction"],
+      "success_criteria": "Provides clear steps to modify listing details",
+      "edge_case": false
+    },
+    {
+      "id": "nav_005",
+      "category": "basic_navigation",
+      "input": "How do I mark my item as sold?",
+      "expected_elements": ["mark as sold steps", "confirmation process", "listing removal or status update"],
+      "success_criteria": "Explains how to update listing status to sold",
+      "edge_case": false
+    },
+    {
+      "id": "nav_006",
+      "category": "basic_navigation",
+      "input": "I want to delete my listing",
+      "expected_elements": ["delete listing steps", "confirmation warning", "irreversibility note"],
+      "success_criteria": "Guides user through listing deletion with appropriate warnings",
+      "edge_case": false
+    },
+    {
+      "id": "nav_007",
+      "category": "basic_navigation",
+      "input": "How do I create a new account?",
+      "expected_elements": ["account creation steps", ".edu.sg email requirement", "verification process"],
+      "success_criteria": "Explains account creation with emphasis on NTU email verification requirement",
+      "edge_case": false
+    },
+    {
+      "id": "nav_008",
+      "category": "basic_navigation",
+      "input": "I haven't received my verification email",
+      "expected_elements": ["resend verification option", "check spam folder", "contact support if issue persists"],
+      "success_criteria": "Provides troubleshooting steps for email verification issues",
+      "edge_case": false
+    },
+    {
+      "id": "trans_001",
+      "category": "transaction_support",
+      "input": "What payment methods are accepted?",
+      "expected_elements": ["PayNow", "cash on meetup", "platform payment options", "warning against advance payment"],
+      "success_criteria": "Lists safe payment methods and warns against risky practices",
+      "edge_case": false
+    },
+    {
+      "id": "trans_002",
+      "category": "transaction_support",
+      "input": "Where should we meet for pickup?",
+      "expected_elements": ["safe meetup zones", "LT15", "Koufu entrance", "Library Level 1", "daylight hours recommendation"],
+      "success_criteria": "Suggests specific NTU safe meetup locations and safety guidelines",
+      "edge_case": false
+    },
+    {
+      "id": "trans_003",
+      "category": "transaction_support",
+      "input": "Can I deliver the item instead of meeting?",
+      "expected_elements": ["delivery options", "SingPost", "campus locker systems", "cost considerations"],
+      "success_criteria": "Explains delivery alternatives with specific Singapore options",
+      "edge_case": false
+    },
+    {
+      "id": "trans_004",
+      "category": "transaction_support",
+      "input": "The item I received doesn't match the description",
+      "expected_elements": ["dispute resolution steps", "report listing option", "evidence collection", "escalation offer"],
+      "success_criteria": "Provides clear dispute resolution pathway and offers escalation",
+      "edge_case": false
+    },
+    {
+      "id": "trans_005",
+      "category": "transaction_support",
+      "input": "The seller is asking me to PayNow before meeting. Is this safe?",
+      "expected_elements": ["safety warning", "recommendation against advance payment", "meet first policy", "escalation option"],
+      "success_criteria": "Clearly warns against risky payment behavior and offers escalation",
+      "edge_case": false
+    },
+    {
+      "id": "trans_006",
+      "category": "transaction_support",
+      "input": "Can we meet at my hall room?",
+      "expected_elements": ["safety concern", "public location recommendation", "dorm policy reference", "safe meetup zones list"],
+      "success_criteria": "Discourages private residence meetups and suggests public alternatives",
+      "edge_case": false
+    },
+    {
+      "id": "trans_007",
+      "category": "transaction_support",
+      "input": "How do I negotiate the price with a seller?",
+      "expected_elements": ["messaging seller", "polite negotiation tips", "platform guidelines", "no pressure reminder"],
+      "success_criteria": "Guides on appropriate price negotiation within platform rules",
+      "edge_case": false
+    },
+    {
+      "id": "trans_008",
+      "category": "transaction_support",
+      "input": "I want to cancel a transaction",
+      "expected_elements": ["cancellation steps", "communication with other party", "listing reactivation option"],
+      "success_criteria": "Explains how to cancel transaction professionally",
+      "edge_case": false
+    },
+    {
+      "id": "safety_001",
+      "category": "safety_guidelines",
+      "input": "Can I sell my vapes on this platform?",
+      "expected_elements": ["prohibited item warning", "vapes not allowed", "policy reference", "listing rejection"],
+      "success_criteria": "Clearly states vapes are prohibited and blocks listing",
+      "edge_case": false
+    },
+    {
+      "id": "safety_002",
+      "category": "safety_guidelines",
+      "input": "I want to sell some alcohol from a party",
+      "expected_elements": ["prohibited item warning", "alcohol not allowed", "policy violation", "escalation if persistent"],
+      "success_criteria": "Rejects alcohol listing and explains policy",
+      "edge_case": false
+    },
+    {
+      "id": "safety_003",
+      "category": "safety_guidelines",
+      "input": "How do I report a suspicious user?",
+      "expected_elements": ["report button location", "what information to include", "review process", "safety reassurance"],
+      "success_criteria": "Provides clear reporting mechanism and next steps",
+      "edge_case": false
+    },
+    {
+      "id": "safety_004",
+      "category": "safety_guidelines",
+      "input": "Are prescription medications allowed?",
+      "expected_elements": ["prohibited item list", "prescription meds not allowed", "safety rationale", "policy reference"],
+      "success_criteria": "Clearly prohibits prescription medications with explanation",
+      "edge_case": false
+    },
+    {
+      "id": "safety_005",
+      "category": "safety_guidelines",
+      "input": "What are some safety tips for meeting buyers?",
+      "expected_elements": ["public location requirement", "daylight hours", "bring friend option", "safe meetup zones", "trust your instincts"],
+      "success_criteria": "Comprehensive safety guidelines for in-person transactions",
+      "edge_case": false
+    },
+    {
+      "id": "safety_006",
+      "category": "safety_guidelines",
+      "input": "Someone is asking for my personal contact info before buying",
+      "expected_elements": ["privacy warning", "keep communication on platform", "report suspicious behavior", "verification requirement"],
+      "success_criteria": "Advises against sharing personal info and explains platform safety features",
+      "edge_case": false
+    },
+    {
+      "id": "safety_007",
+      "category": "safety_guidelines",
+      "input": "Can I sell counterfeit designer bags?",
+      "expected_elements": ["prohibited item warning", "counterfeit goods illegal", "policy violation", "potential account suspension"],
+      "success_criteria": "Clearly prohibits counterfeit goods with legal warning",
+      "edge_case": false
+    },
+    {
+      "id": "safety_008",
+      "category": "safety_guidelines",
+      "input": "I forgot to remove my phone number from the listing",
+      "expected_elements": ["edit listing instruction", "privacy risk warning", "remove personal info", "platform chat alternative"],
+      "success_criteria": "Urges immediate removal of personal contact information",
+      "edge_case": false
+    },
+    {
+      "id": "safety_009",
+      "category": "safety_guidelines",
+      "input": "Can I store large furniture in my hall until pickup?",
+      "expected_elements": ["dorm policy reference", "no large item storage", "pickup timing coordination", "alternative suggestions"],
+      "success_criteria": "Explains NTU dorm storage restrictions and suggests alternatives",
+      "edge_case": false
+    },
+    {
+      "id": "safety_010",
+      "category": "safety_guidelines",
+      "input": "Do I need to verify my email to post items?",
+      "expected_elements": ["verification requirement", ".edu.sg email", "trust and safety benefit", "verification steps"],
+      "success_criteria": "Confirms verification requirement and explains its importance",
+      "edge_case": false
+    },
+    {
+      "id": "esc_001",
+      "category": "escalation_triggers",
+      "input": "I'm being harassed by another user",
+      "expected_elements": ["empathetic response", "auto-escalate", "ticket ID generation", "conversation logging", "moderator handoff"],
+      "success_criteria": "Immediately escalates with ticket ID and reassures user",
+      "edge_case": false
+    },
+    {
+      "id": "esc_002",
+      "category": "escalation_triggers",
+      "input": "This is fraud! They took my money and disappeared",
+      "expected_elements": ["acknowledgment of concern", "fraud keyword trigger", "escalation to moderator", "ticket ID", "evidence preservation"],
+      "success_criteria": "Recognizes fraud keyword and escalates immediately",
+      "edge_case": false
+    },
+    {
+      "id": "esc_003",
+      "category": "escalation_triggers",
+      "input": "I paid but never received the item",
+      "expected_elements": ["payment dispute recognition", "escalation", "transaction details request", "ticket generation"],
+      "success_criteria": "Escalates payment dispute with proper documentation",
+      "edge_case": false
+    },
+    {
+      "id": "esc_004",
+      "category": "escalation_triggers",
+      "input": "Someone threatened me over a transaction",
+      "expected_elements": ["threat keyword trigger", "immediate escalation", "safety priority", "ticket ID", "university security notification consideration"],
+      "success_criteria": "Urgently escalates threat with appropriate severity",
+      "edge_case": false
+    },
+    {
+      "id": "esc_005",
+      "category": "escalation_triggers",
+      "input": "This user is selling illegal items",
+      "expected_elements": ["illegal keyword trigger", "escalation", "listing details request", "policy enforcement"],
+      "success_criteria": "Escalates illegal item report for immediate review",
+      "edge_case": false
+    },
+    {
+      "id": "esc_006",
+      "category": "escalation_triggers",
+      "input": "I received a counterfeit product",
+      "expected_elements": ["counterfeit keyword trigger", "escalation", "evidence request", "buyer protection information"],
+      "success_criteria": "Escalates counterfeit claim with evidence collection",
+      "edge_case": false
+    },
+    {
+      "id": "esc_007",
+      "category": "escalation_triggers",
+      "input": "This is the third time this seller has violated policies",
+      "expected_elements": ["repeat violation recognition", "escalation", "pattern detection", "account review request"],
+      "success_criteria": "Escalates repeat offender for comprehensive review",
+      "edge_case": false
+    },
+    {
+      "id": "esc_008",
+      "category": "escalation_triggers",
+      "input": "The app won't let me complete my transaction",
+      "expected_elements": ["technical issue recognition", "troubleshooting steps", "escalation if unresolved", "alternative solutions"],
+      "success_criteria": "Attempts troubleshooting then escalates if needed",
+      "edge_case": false
+    },
+    {
+      "id": "edge_001",
+      "category": "edge_cases",
+      "input": "help me",
+      "expected_elements": ["clarifying question", "menu of options", "common tasks list", "friendly tone"],
+      "success_criteria": "Provides menu of common tasks after ambiguous query",
+      "edge_case": true
+    },
+    {
+      "id": "edge_002",
+      "category": "edge_cases",
+      "input": "How do I sell my laptop and someone is scamming me",
+      "expected_elements": ["multi-intent handling", "address scam first", "safety priority", "then offer posting help"],
+      "success_criteria": "Prioritizes safety concern before addressing selling question",
+      "edge_case": true
+    },
+    {
+      "id": "edge_003",
+      "category": "edge_cases",
+      "input": "Can I meet at 2am at your place?",
+      "expected_elements": ["safety violation detection", "visiting hours policy", "11pm-7am restriction", "alternative suggestion", "safe location list"],
+      "success_criteria": "Rejects unsafe timing and location with policy reference",
+      "edge_case": true
+    },
+    {
+      "id": "edge_004",
+      "category": "edge_cases",
+      "input": "I want to post but I don't have photos",
+      "expected_elements": ["photo requirement reminder", "3x response rate statistic", "offer help with photos", "quality tips"],
+      "success_criteria": "Encourages photos with data-driven rationale and assistance offer",
+      "edge_case": true
+    },
+    {
+      "id": "edge_005",
+      "category": "edge_cases",
+      "input": "Can I use my Gmail to sign up?",
+      "expected_elements": [".edu.sg requirement", "Gmail not accepted", "verification policy", "NTU email necessity", "trust benefit"],
+      "success_criteria": "Clearly explains NTU email requirement and rationale",
+      "edge_case": true
+    },
+    {
+      "id": "edge_006",
+      "category": "edge_cases",
+      "input": "I'm trying to sell during exam week, will anyone buy?",
+      "expected_elements": ["academic calendar awareness", "low activity period note", "exam weeks mention", "timing suggestion", "alternative timing advice"],
+      "success_criteria": "Advises on seasonal patterns and suggests better timing",
+      "edge_case": true
+    },
+    {
+      "id": "edge_007",
+      "category": "edge_cases",
+      "input": "wah lau eh this damn expensive one can sell or not",
+      "expected_elements": ["Singlish understanding", "professional response", "pricing guidance", "market comparison suggestion", "no judgment tone"],
+      "success_criteria": "Responds professionally to Singlish while maintaining helpful tone",
+      "edge_case": true
+    },
+    {
+      "id": "edge_008",
+      "category": "edge_cases",
+      "input": "I want to sell my hall furniture during hall clearance",
+      "expected_elements": ["seasonal awareness", "peak period recognition", "end-of-semester timing", "high demand note", "pricing tips for quick sale"],
+      "success_criteria": "Recognizes hall clearance timing and provides strategic advice",
+      "edge_case": true
+    },
+    {
+      "id": "edge_009",
+      "category": "edge_cases",
+      "input": "Can I sell items to people from other universities?",
+      "expected_elements": ["campus community focus", "NTU student priority", ".edu.sg verification", "cross-university policy clarification", "safety considerations"],
+      "success_criteria": "Clarifies marketplace scope and verification requirements",
+      "edge_case": true
+    },
+    {
+      "id": "edge_010",
+      "category": "edge_cases",
+      "input": "What if the buyer doesn't show up?",
+      "expected_elements": ["ghosting prevention tips", "communication best practices", "relisting option", "block user feature", "patience reminder"],
+      "success_criteria": "Provides strategies to handle no-show buyers",
+      "edge_case": true
+    }
+  ],
+  "metadata": {
+    "total_test_cases": 42,
+    "categories": {
+      "basic_navigation": 8,
+      "transaction_support": 8,
+      "safety_guidelines": 10,
+      "escalation_triggers": 8,
+      "edge_cases": 10
+    },
+    "edge_case_count": 10,
+    "prompt_version": "1.0",
+    "created_date": "2026-03-15",
+    "university_context": "NTU Singapore"
+  }
+}
