@@ -167,7 +167,7 @@ university-marketplace-chatbot-assessment/
 
 ### 2. Full LLM API Integration in Prototype
 **Considered**: Calling Claude API directly in the Gradio app for dynamic responses.  
-**Rejected Because**: The 30-minute prototype constraint, combined with API key management and error handling complexity, made rule-based intent matching a more reliable demonstration of logic flow. The `prompt.md` file already demonstrates the GenAI strategy; the prototype validates implementation understanding.
+**Rejected Because**: The timeand money prototype constraint, instead i used my existing OpenAI API key that i had previously to use for this project
 
 ### 3. Botpress or Dialogflow for Chatbot Platform
 **Considered**: Using a dedicated chatbot builder with visual flow design.  
@@ -178,13 +178,13 @@ university-marketplace-chatbot-assessment/
 ## My Experience with University Marketplaces
 
 ### As a Buyer
-- **Textbook Hunting**: During add/drop week, I've searched for module-specific textbooks and appreciated sellers who included ISBN, edition, and condition details. Listings without photos or clear pickup instructions were frustrating.
 - **Safety Awareness**: I've declined meetup requests for private hall rooms and preferred public zones like library foyers—validating the need for enforced safe location guidance.
-- **Price Sensitivity**: As a student budget, I've compared prices across platforms and valued chatbot guidance on fair market ranges.
+- **Ghosting of Sellers**: Many sellers that i've arranged a meetup with in school failed to show up to the meetup and failed to reply on the day of the meetup itself and afterward. This wasted my time and proved to be a frustrating experience
+- **Price Sensitivity**: I've seen many students mark up their prices for unopened goods and though that it was not very fair. As a student budget, I've compared prices across platforms and hence i put a value on chatbot guidance on fair market ranges. 
 
 ### As a Seller
 - **Listing Friction**: I've abandoned listings when unsure what details to include. A guided posting flow (like the one in `prompt.md`) would have reduced this friction.
-- **Ghosting Encounters**: I've experienced no-show buyers, highlighting the need for reminder notifications and clear platform policies.
+- **Ghosting Encounters**: On top of sellers, i've experienced no-show buyers, highlighting the need for reminder notifications and clear platform policies.
 - **Hall Clearance Rush**: During end-of-semester clearance, I needed to list multiple items quickly. Bulk listing tools and "free pickup" coordination (mentioned in `marketplace-insights.md`) would have been valuable.
 
 ### Key Insight
@@ -196,4 +196,4 @@ University marketplaces aren't just transactional—they're community-building t
 
 If you have questions about this submission or would like to discuss my approach, please reach out via the submission portal or email. I welcome the opportunity to walk through any component in more detail.
 
-**Thank you for considering my application.** 🙏
+**Thank you for considering my application.** 
