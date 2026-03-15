@@ -268,6 +268,3 @@ Key metrics to track in real-time:
 | `approvals/` | Approval request records | Subdirectory |
 | `incidents.json` | Rollback and incident log | Repository root |
 
----
-
-*Document Version: 1.0 | Last Updated: 2026-03-15 | Owner: Tan Jia Hui*
