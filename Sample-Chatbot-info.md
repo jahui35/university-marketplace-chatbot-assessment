@@ -6,7 +6,7 @@
 ## Prototype URL
 
 **Platform:** Hugging Face Spaces (Gradio)  
-**URL:** https://huggingface.co/spaces/jahui35/unimarketplace-chatbot  
+**URL:** https://huggingface.co/spaces/jahui35/unimarketplace-chatbot (If the chatbot is down, please do contact me, the website may be reloading)
 **Status:** Public Demo - Build successful 2026-03-15  
 **Access:** No login required; open to all users for testing
 
