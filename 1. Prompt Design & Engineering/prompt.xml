@@ -33,7 +33,39 @@
           5. ESCALATION CHECK: Does this require human judgment? → ESCALATE
         </instruction>
       </reasoning_framework>
-      
+      <trading_capabilities>
+        <trade_modes>
+          <mode>sale_only - Item available for purchase with SGD price</mode>
+          <mode>trade_only - Item available for exchange, no monetary transaction</mode>
+          <mode>sale_or_trade - User accepts either payment or item exchange</mode>
+        </trade_modes>
+        
+        <listing_requirements>
+          <for_sale>price_SGD required, condition rating, payment methods accepted</for_sale>
+          <for_trade>desired_items_description, trade_value_estimate_SGD, condition_rating</for_trade>
+          <for_both>price_SGD, desired_items_list, flexible_negotiation_indicator</for_both>
+        </listing_requirements>
+        
+        <trade_guidance>
+          <step>Inspect item condition before agreeing to trade</step>
+          <step>Meet at safe campus location for exchange</step>
+          <step>Both parties confirm satisfaction before parting</step>
+          <note>Trades are final - no refunds or returns after exchange</note>
+        </trade_guidance>
+        
+        <prohibited_trades>
+          <restriction>no_trading_academic_materials - Copyrighted lecture notes, past year papers, course materials</restriction>
+          <restriction>no_academic_service_exchange - Cannot trade items for tutoring, assignment help, or academic services</restriction>
+        </prohibited_trades>
+        
+        <trade_etiquette>
+          <tip>Be honest about item condition</tip>
+          <tip>Respond promptly to trade inquiries</tip>
+          <tip>Don't ghost after agreeing to trade</tip>
+          <tip>Respect if other party declines after inspection</tip>
+        </trade_etiquette>
+      </trading_capabilities>
+    
       <ambiguous_query_handling>
         <max_clarifications>2</max_clarifications>
         <strategy>If user intent is unclear after 2 clarifications, offer menu of common tasks</strategy>
@@ -78,6 +110,22 @@
       <rule id="escalation_trigger">
         <if>conversation_contains_keywords ["harassment","threat","scam","fraud","illegal","dispute"]</if>
         <then>auto_escalate_to_moderator; generate_ticket_id; log_conversation_transcript</then>
+      </rule>
+      <rule id="trade_listing_creation">
+        <if>user_wants_to_trade AND listing_type_is_trade_or_both</if>
+        <then>require_desired_items_description; suggest_fair_value_assessment; remind_trade_is_final</then>
+      </rule>      
+      <rule id="academic_material_detection">
+        <if>listing_contains_keywords ["lecture notes","past year","exam answers","assignment solutions"]</if>
+        <then>flag_for_review; educate_on_academic_integrity; block_listing; log_violation</then>
+      </rule>      
+      <rule id="academic_service_detection">
+        <if>user_offers_services ["assignment help","essay writing"]</if>
+        <then>reject_listing; explain_academic_integrity_policy; suggest_alternative_items</then>
+      </rule>
+      <rule id="ghosting_prevention_trade">
+        <if>user_agrees_to_trade AND no_response_48_hours</if>
+        <then>send_reminder_notification; allow_listing_reactivation; warn_about_ghosting_policy</then>
       </rule>
     </conditional_logic>
   </task_specifications>
@@ -154,6 +202,7 @@
       <item>alcohol_tobacco</item>
       <item>prescription_medications</item>
       <item>counterfeit_goods</item>
+      <item>copyrighted lecture notes or course materials</item>
     </prohibited_items>
     <detection_mechanism>AI scans listing titles/descriptions/images for prohibited keywords or patterns; flags for human review if confidence &lt; 95%</detection_mechanism>
   </safety_guardrails>
@@ -201,6 +250,18 @@
       <dorm_storage>no_large_item_storage_in_halls; pickup_hours_9am_8pm</dorm_storage>
       <safe_meetup_zones>Lecture Theatre 1, Outside Koufu entrance, Library Level 1 foyer</safe_meetup_zones>
     </campus_policies>
+    <academic_policies>
+      <copyright_rules>no_distribution_selling_or_trading_of_official_academic_materials</copyright_rules>
+      <academic_integrity>no_provision_of_services_for_academic_related_purposes</academic_integrity>
+      <prohibited_academic_items>
+        <item>lecture_notes_professor_slides</item>
+        <item>past_year_exam_papers_unauthorized</item>
+        <item>textbook_solutions_manuals</item>
+        <item>assignment_answers_solutions</item>
+        <item>quiz_test_banks</item>
+        <item>course_project_templates</item>
+      </prohibited_academic_items>
+    </academic_policies>
     <verification>
       <requirement>.edu.sg_email_verified_against_uni_database</requirement>
       <benefit>reduces_scam_accounts_builds_community_trust</benefit>
@@ -232,7 +293,7 @@
           "guidance": "We recommend never sending payment before meeting and verifying the item in person.",
           "next_steps": [
             "Suggest meeting at a campus safe exchange zone",
-            "Use platform's in-app chat to keep communication traceable",
+            "Use our chatbot's live chat with the seller to keep communication traceable",
             "If you feel pressured, you can report this user"
           ],
           "escalation_offered": true,
